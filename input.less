@@ -1,0 +1,19 @@
+body {
+
+	div {
+
+		// Works
+		& when (@rtl) {
+			color: green;
+		}
+
+		& when (@ltr) {
+			color: blue;
+		}
+
+		// Does not work
+		-ltr-transform: translateX(0%);
+		-rtl-transform: translateX(100%);
+	}
+	
+}
